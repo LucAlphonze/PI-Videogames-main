@@ -1,0 +1,49 @@
+.card_contenedor {
+    display: flex;
+    justify-content:space-evenly;
+    flex-wrap:wrap;
+    text-decoration: none;
+    
+  }
+  .Title{
+    color: white;
+  }
+  .loading-background{
+    background-color: hsl(0, 0%, 0%);
+
+  }
+  .loading {
+    align-items:center;
+   /* width: fit-content;
+   height: fit-content; */
+  }
+  .loadingT {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 0px;
+ 
+  }
+  .Button{
+    width: 10%;
+  height: 35px;
+  margin-top: 25px;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "Staatliches", sans-serif;
+  color: rgb(0, 0, 0);
+  background-color: hsl(142,90%, 61%);;
+  border: solid rgb(255, 255, 255) 2px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0px 5px 0px rgb(0, 0, 0);
+  transition: all ease 200ms;
+
+
+}
+.Button:active{
+  transform: translateY(5%);
+}
+.Button:hover{
+  background-color:hsl(0,0%, 100%);
+}

@@ -1,0 +1,21 @@
+.Conte-General {
+    box-sizing: border-box;
+    border-radius: 30px;
+    border-color: #00a2f0;
+    background-color: hsl(142,90%, 61%);
+    box-shadow: rgba(53, 145, 65, 0.3) 20%;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 5px;
+  }
+  .ImagenDetail {
+    height: 410px;
+    width: 730px;
+    vertical-align: middle;
+    margin-bottom: 20px;
+    padding: 0;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.767);
+    border-radius: 20px;
+  }

@@ -1,0 +1,121 @@
+
+:root{
+  --clr-neutral-900: hsl(207,19%, 9%);
+  --clr-neutral-100: hsl(0,0%, 100%);
+  --clr-accent-400: hsl(142,90%, 61%);
+  
+  
+}
+
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+body{
+
+  background: black;
+
+}
+.C-body{
+  display: flex;
+  min-height: 60vh;
+  place-items:center ;
+  line-height: 1.6;
+  background: transparent;
+  font-family: sans-serif;
+}
+
+.card{
+  color: var(--clr-neutral-100);
+  background-size: cover;
+  padding: 0% 0%;
+  max-width: 100rem;
+  border-radius: 0.7rem;
+  overflow: hidden;
+  box-shadow: -1px 2px 2px 8px hsl(142,90%, 61%);
+  transition: transform 500ms ease;
+  
+}
+.card-imagen{
+background-color: rgba(74, 250, 97, 0);
+  height: 251px;
+  width: 500px;
+}
+.card:hover{
+  /* con el mouse arriba pasan cosas (aca se agranda un toque)*/
+  transform: scale(1.05);
+}
+
+.card-content{
+  padding: 0.5em;
+  /*esto es para hacer ese efecto de fading
+  
+  */
+  background-color: var(--clr-accent-400);
+  background: linear-gradient(
+      rgba(74, 250, 97, 0),
+      rgba(53, 145, 65, 0.3) 20%,
+      rgb(24, 59, 29)
+  );
+
+  transform: translateY(55%);
+  transition: transform 500ms ease;
+}
+
+.card:hover .card-content{
+  transform: translateY(0%);
+  transition-delay: 400ms;
+
+
+}
+
+.card-title{
+  position: relative;
+  width: max-content;
+  color: #fbfbfb;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-family: "Staatliches", sans-serif;
+  text-shadow: 2px 2px 5px rgb(0, 0, 0);
+
+}
+
+.card-title::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  background: var(--clr-accent-400);
+  transform: scaleX(0);
+
+  /*transform-origin: left;*/
+  transition: transform 500ms ease;
+}
+
+.card:hover .card-title::after{
+  transform: scaleX(1);
+}
+.button{
+  font-family: "Staatliches", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline;
+  text-decoration: none;
+  color: hsl(207,19%, 9%);
+  background-color: var(--clr-accent-400);
+  padding: 0.5em 1.25em;
+  border-radius: 0.3em;
+}
+.button:hover,
+.button:focus{
+  background-color: var(--clr-neutral-100);
+}
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+}
