@@ -2,14 +2,14 @@ const { Videogame, Genre } = require("../db");
 const { API_KEY } = process.env;
 const axios = require("axios");
 
-//TRAIGO LA INFORMACION DE LA API
+// API
 const getApiInfo = async () => {
   try {
     const arrVideogames = []; //Este array es para guardar los 20 videojuegos de cada pagina de la api
     let apiUrl = `https://api.rawg.io/api/games?key=${API_KEY}`;
 
     for (let i = 0; i < 5; i++) {
-      //Necesito 5 paginas para un total de 100 videjuegos
+      // 5 paginas para  100 videjuegos
       let pages = await axios.get(apiUrl);
       pages.data.results?.map((e) => {
         arrVideogames.push({
@@ -30,7 +30,7 @@ const getApiInfo = async () => {
   }
 };
 
-//TRAIGO LA INFORMACION DE LA BASE DE DATOS
+// BASE DE DATOS
 const getDbInfo = async () => {
   const infoDb = await Videogame.findAll({
     include: {

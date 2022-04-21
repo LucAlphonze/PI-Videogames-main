@@ -26,28 +26,28 @@ export default function Detail() {
           <img className="ImagenDetail" src={myVideogame.image} alt="" />
 
           <div className="Conte-Sub">
-            <h4 className="tituloElem"> Rating: {myVideogame.rating}</h4>
+            <h4 className="detailTitle"> Rating: {myVideogame.rating}</h4>
         
-            <h4 className="tituloElem">
+            <h4 className="detailTitle">
                Release Date: {myVideogame.released}
             </h4>
         
-            <h4 className="tituloElem">
+            <h4 className="detailTitle">
                Platforms: {myVideogame.platforms?.join(",  ")}
             </h4>
 
-            <h4 className="tituloElem">
+            <h4 className="detailTitle">
                Genres: {myVideogame.genres?.join(",  ")}
             </h4>
         
-            <h4 className="tituloElem"> Description: </h4>
+            <h4 className="detailTitle"> Description: </h4>
             <p
-              className="Descripcion-Detalle"
+              className="Detail-Description"
               dangerouslySetInnerHTML={{ __html: myVideogame.description }}
             />
           </div>
           <Link to="/home">
-            <button className="Boton-Volver-Det">Back</button>
+            <button className="button">Back</button>
           </Link>
         </div>
       ) : (

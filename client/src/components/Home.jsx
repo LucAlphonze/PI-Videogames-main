@@ -139,12 +139,12 @@ export default function Home() {
 
         <select
           className="selector"
-          defaultValue="Origen"
+          defaultValue="From"
           onChange={(e) => handleFilterCreated(e)}
         >
-          <option disabled>Origen</option>
+          <option disabled>From</option>
           <option value="All">All</option>
-          <option value="created">Created</option>
+          <option value="created">DB</option>
           <option value="api">Api</option>
         </select>
 

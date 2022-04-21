@@ -7,7 +7,7 @@ export default function Nav() {
     return <div className="cont">
         <div className="nav">
             <Link to = '/'>
-                <button>Home</button>
+                <button className="button">Landing page</button>
             </Link>
             <SearchBar/>
         </div>

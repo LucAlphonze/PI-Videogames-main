@@ -102,32 +102,32 @@ export default function VideogameCreate() {
   function handleSubmit(e) {
     e.preventDefault();
     if (input.name.trim() === "") {
-      return alert("Debe ingresar un nombre");
+      return alert("A name must be input");
     } else if (
       videogames.find(
         (e) => e.name.toLowerCase().trim() === input.name.toLowerCase().trim()
       )
     ) {
-      return alert(`El nombre ${input.name} ya existe`);
+      return alert(`The name ${input.name} already exists`);
     } else if (input.description.trim() === "") {
-      return alert("Descripción requerida");
+      return alert("A description is required");
     } else if (input.released.trim() === "") {
-      return alert("Fecha de lanzamiento requerida");
+      return alert("A release date is required");
     } else if (input.released < "1951-05-03") {
-      return alert("Fecha no puede ser menor a 03/05/1951");
+      return alert("Please insert a date after 03/05/1951");
     } else if (
       input.rating.trim() === "" ||
       input.rating < 1 ||
       input.rating > 10
     ) {
-      return alert("Coloca un Puntaje del 1 al 10");
+      return alert("Choose a rating between 1 - 10");
     } else if (input.genres.length === 0) {
-      return alert("Coloca un o más Generos");
+      return alert("Choose a genre or more");
     } else if (input.platforms.length === 0) {
-      return alert("Coloca una o más Plataformas");
+      return alert("Choose a platform or more");
     } else {
       dispatch(postVideogame(input));
-      alert("Videojuego creado!!");
+      alert("Videogame created successfully");
       setInput({
         name: "",
         image: "",
@@ -284,13 +284,13 @@ export default function VideogameCreate() {
             </ul>
           </div>
           <div>
-            <button className="botonCr" type="submit">
+            <button className="button" type="submit">
               Create Game
             </button>
           </div>
           <div>
             <Link to="/home">
-              <button className="botonV">Go Back</button>
+              <button className="button">Go Back</button>
             </Link>
           </div>
         </form>
